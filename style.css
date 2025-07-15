@@ -1,0 +1,133 @@
+  
+    :root {
+      --primary-color: #3e3e3e;
+      --secondary-color: #ffffff;
+      --accent-color: #3b82f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      color: var(--secondary-color);
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      max-width: 100px;
+      height: auto;
+      display: block;
+      margin: 0 auto 1rem;
+      transition: transform 0.5s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .poster {
+      background: linear-gradient(120deg, #ff9ff3, #feca57, #1dd1a1);
+      background-size: 200% 200%;
+      animation: gradientShift 8s ease infinite;
+      color: #fff;
+      padding: 4rem 2rem;
+      border-radius: 16px;
+      text-align: center;
+      margin: 3rem auto;
+      max-width: 1000px;
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+      transform: translateY(0);
+      transition: transform 0.5s ease;
+    }
+
+    .poster:hover {
+      transform: translateY(-5px);
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .poster h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .poster p {
+      font-size: 1.25rem;
+      margin: 0.4rem 0;
+      transition: transform 0.3s ease;
+    }
+
+    .poster p:hover {
+      transform: scale(1.05);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .courses {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .courses:hover {
+      transform: translateY(-3px);
+    }
+
+    .courses h2 {
+      font-size: 2rem;
+      color: #1f2937;
+    }
+
+    .courses ul {
+      padding-left: 1.5rem;
+      line-height: 1.8;
+    }
+
+    .timing {
+      background-color: #e2e8f0;
+      padding: 1rem;
+      border-radius: 8px;
+      font-weight: bold;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .timing:hover {
+      background-color: #cbd5e0;
+    }
+
+    @media (max-width: 768px) {
+      .poster h1 {
+        font-size: 2rem;
+      }
+      .poster p {
+        font-size: 1rem;
+      }
+      .container {
+        padding: 1rem;
+      }
+    }
